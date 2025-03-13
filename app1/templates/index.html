@@ -1,0 +1,500 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CAFE/Home</title>
+
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+        <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="{% static 'app1/test.css' %}">
+
+    </head>
+    <body>
+        <header>
+            <div class="header-area">
+                <div class="container-fluid">
+                    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+                        <!-- Logo -->
+                        <a class="navbar-brand" href="{% url 'index' %}">
+                            <img class="image" src="{% static 'app1/images/logo (1).png' %}" alt="Logo" width="80" height="100">
+                        </a>
+    
+                        <!-- Toggle button for mobile view -->
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+    
+                        <!-- Navbar Links -->
+                        <div class="collapse navbar-collapse " id="navbarNav">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'index' %}">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'about' %}">About Us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'menu' %}">Menu</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'blog' %}">Blog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'contact' %}">Contact</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+                            <!-- Carousel -->
+            <div id="demo" class="carousel" data-bs-interval="false">
+    
+                <!-- Indicators/dots -->
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#demo" data-bs-slide-to="0" class="active"></button>
+                  <button type="button" data-bs-target="#demo" data-bs-slide-to="1"></button>
+                  <button type="button" data-bs-target="#demo" data-bs-slide-to="2"></button>
+                </div>
+              
+                <!-- The slideshow/carousel -->
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="{% static 'app1/images/bg-8.jpg' %}" class="d-block w-100">
+                    <div class="carousel-caption">
+                        <span class="subheading">Welcome</span>
+                        <h1 class="mb-4">Amazing Taste &amp; Beautiful Place</h1>
+                        <p class="mb-4 mb-md-5">Experience the finest blend of coffee, carefully sourced and roasted to perfection. </p>
+                        <p><a href="{% url 'order' %}" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Online</a></p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{% static 'app1/images/slide-1.jpg' %}" class="d-block w-100" style="width:100%">
+                    <div class="carousel-caption">
+                        <span class="subheading">Welcome</span>
+                        <h1 class="mb-4">The Best Coffee Testing Experience</h1>
+                        <p class="mb-4 mb-md-5">Every cup is crafted with passion, offering you a moment of indulgence and relaxation. </p>
+                        <p><a href="{% url 'order' %}" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Online</a></p>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <img src="{% static 'app1/images/slide-2.jpg' %}" class="d-block w-100">
+                    <div class="carousel-caption">
+                        <span class="subheading">Welcome</span>
+                        <h1 class="mb-4">Creamy Hot and Ready to Serve</h1>
+                        <p class="mb-4 mb-md-5">Discover the rich flavors and aromas that make each sip memorable.</p>
+                        <p><a href="{% url 'order' %}" class="btn btn-primary p-3 px-xl-4 py-xl-3">Order Online</a></p>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- Left and right controls/icons -->
+                <button class="carousel-control-prev" type="button" data-bs-target="#demo" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#demo" data-bs-slide="next">
+                  <span class="carousel-control-next-icon"></span>
+                </button>
+            </div>
+        </header>
+        <!--About area-->
+        <section class="about-area section padding">
+            <div class="container">
+                <div class="row">
+                    <div class="offset-xxl-1 col-xxl-6 col-xl-6 col-lg-6 col-md-9 custom-left-margin">
+                        <div class="about-caption">
+                            <div class="section-title mb-25">
+                                <h2>A Cozy Café in the Heart of Tirana</h2>
+                                <p class="pt-20">Bringing together the warmth of Albanian hospitality and the finest coffee from around the world. 
+                                Whether you're here for a quick espresso or a leisurely afternoon, we promise an unforgettable 
+                                experience with every cup.</p>
+                                <div class="icon1 mt-40">
+                                    <img src="{% static 'app1/images/icon-1.png' %}" height="130px" width="130px">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="offset-xl-1 col-xxl-4 col-xl-5 col-lg-5 col-md-12">
+                        <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="support-caption">
+                                    <div class="single-info">
+                                        <div class="contents">
+                                            <h4>We are open</h4>
+                                            <p>Monday-Friday</p>
+                                            <span>8:00 am – 9:00 pm</span>
+                                            <p>Saturday & Sunday</p>
+                                            <span>9:00 am – 11:00 pm</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6">
+                                <div class="about-shape d-none d-lg-block">
+                                    <img src="{% static 'app1/images/icon-2.png' %}" height="230px" width="230px">
+                                </div>
+                            </div>
+                        </div>
+                    </div>           
+                </div>
+            </div>
+        </section>
+        <div class="compay-img fix">
+            <div class="container-fluid p-0">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <img src="{% static 'app1/images/bg_3.jpg' %}" class="w-100">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Best-sellers section-->
+        <section class="bs-section">
+            <div class="container">
+                <div class="row justify-content-center mb-5 pb-3">
+                    <div class="col-md-7 heading-section text-center">
+                        <span class="subheading">Discover</span>
+                        <h2 class="mb-4">Best Coffee Sellers</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="menu-entry">
+                            <img src="{{ products.0.image.url }}" alt="">
+                            <div class="text text-center pt-4">
+                                <h3>Coffee Cappuccino</h3>
+                                <p>Good espresso, even better foam on top</p>
+                                <p class="price"><span>3.90$</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="menu-entry">
+                            <img src="{{ products.1.image.url }}" alt="">
+                            <div class="text text-center pt-4">
+                                <h3>Creamy latte</h3>
+                                <p>Classic espresso, infused with the kind of milk you love</p>
+                                <p class="price"><span>3.90$</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="menu-entry">
+                            <img src="{{ products.2.image.url }}" alt="">
+                            <div class="text text-center pt-4">
+                                <h3>Americano</h3>
+                                <p>The classic.
+                                    <br>
+                                    The legend.</p>
+                                <p class="price"><span>2.50$</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="menu-entry">
+                            <img src="{{ products.3.image.url }}" alt="">
+                            <div class="text text-center pt-4">
+                                <h3>Red eye</h3>
+                                <p>Intense flavour, slow brewed to perfection</p>
+                                <p class="price"><span>5.90$</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Our-services-area-->
+        <section class="our-services-area">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-12">
+                        <div class="single-services1">
+                            <div class="services-ion">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="55.55" height="55.548" viewBox="0 0 55.55 55.548">
+                                    <g id="services1" transform="translate(0)">
+                                      <path id="Path_224" data-name="Path 224" d="M19.26,55.55A7.211,7.211,0,0,1,12.5,50.867l-1.718-4.581a2.589,2.589,0,0,0-1.516-1.514l-4.583-1.72A7.221,7.221,0,0,1,.646,33.3L2.67,28.849a2.585,2.585,0,0,0,0-2.143L.646,22.247A7.221,7.221,0,0,1,4.683,12.5l4.581-1.72a2.583,2.583,0,0,0,1.516-1.514L12.5,4.685A7.222,7.222,0,0,1,22.248.646L26.7,2.671a2.6,2.6,0,0,0,2.143,0L33.3.646a7.218,7.218,0,0,1,9.748,4.037l1.718,4.581a2.589,2.589,0,0,0,1.516,1.514l4.583,1.72A7.221,7.221,0,0,1,54.9,22.245L52.882,26.7a2.585,2.585,0,0,0,0,2.143L54.907,33.3a7.221,7.221,0,0,1-4.037,9.748l-4.581,1.72a2.583,2.583,0,0,0-1.516,1.514l-1.72,4.581A7.218,7.218,0,0,1,33.306,54.9L28.85,52.874a2.6,2.6,0,0,0-2.143,0L22.248,54.9A7.241,7.241,0,0,1,19.26,55.55Zm0-50.925a2.608,2.608,0,0,0-2.426,1.687l-1.72,4.581a7.222,7.222,0,0,1-4.224,4.222l-4.581,1.72a2.588,2.588,0,0,0-1.449,3.5l2.025,4.456a7.219,7.219,0,0,1,0,5.977L4.864,35.219a2.588,2.588,0,0,0,1.449,3.5l4.583,1.72a7.212,7.212,0,0,1,4.222,4.222l1.72,4.581a2.592,2.592,0,0,0,3.5,1.451l4.458-2.025a7.209,7.209,0,0,1,5.972,0l4.456,2.025a2.59,2.59,0,0,0,3.5-1.451l1.72-4.581a7.21,7.21,0,0,1,4.224-4.222l4.581-1.72a2.588,2.588,0,0,0,1.449-3.5l-2.025-4.456a7.219,7.219,0,0,1,0-5.977l2.023-4.456a2.588,2.588,0,0,0-1.449-3.5l-4.583-1.72a7.212,7.212,0,0,1-4.222-4.222l-1.72-4.581a2.592,2.592,0,0,0-3.5-1.451L30.762,6.886a7.209,7.209,0,0,1-5.972,0L20.334,4.861a2.575,2.575,0,0,0-1.072-.236ZM29.8,4.778h.023Z" transform="translate(-0.001 -0.002)" fill="#efc6ba"/>
+                                      <path id="Path_225" data-name="Path 225" d="M30.058,19.423A14.225,14.225,0,0,0,25.9,11.241C20.961,6.308,13.665,5.583,9.631,9.616A9.472,9.472,0,0,0,7.091,17.7a14.225,14.225,0,0,0,4.162,8.183,13.86,13.86,0,0,0,9.616,4.234,9.242,9.242,0,0,0,6.65-2.609,9.472,9.472,0,0,0,2.539-8.083Zm-7.435-4.91A9.593,9.593,0,0,1,25.466,20c.014.113,0,.215.012.326a7.511,7.511,0,0,0-1.359-1.831,7.652,7.652,0,0,0-5.354-2.238,3.121,3.121,0,0,1-3.37-3.356c-.03-.361-.076-.762-.141-1.178a5.843,5.843,0,0,1,1.016-.09A9.346,9.346,0,0,1,22.623,14.514Zm-8.1,8.095a9.593,9.593,0,0,1-2.843-5.484c-.014-.116,0-.222-.012-.336a7.661,7.661,0,0,0,6.713,4.076,3.183,3.183,0,0,1,2.465.905,3.1,3.1,0,0,1,.887,2.421c.03.363.072.769.137,1.187A8.776,8.776,0,0,1,14.526,22.609Z" transform="translate(9.199 9.211)" fill="#efc6ba"/>
+                                    </g>
+                                  </svg>                                  
+                            </div>
+                            <div class="services-cap">
+                                <p>Our expert support team is here to assist you with any problems you might encounter. Whatever, whenever. Use the contact form to reach out or call us 24/7.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-12">
+                        <div class="single-services1">
+                            <div class="services-ion">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="55.548" height="55.548" viewBox="0 0 55.548 55.548">
+                                    <g id="services2" transform="translate(0)">
+                                      <path id="Path_226" data-name="Path 226" d="M53.92,18.483a1.627,1.627,0,0,0,1.627-1.627V5.617A5.624,5.624,0,0,0,49.931,0H5.617A5.624,5.624,0,0,0,0,5.617V16.856a1.627,1.627,0,0,0,1.627,1.627H3.886V45.791H1.627A1.627,1.627,0,0,0,0,47.418v6.5a1.627,1.627,0,0,0,1.627,1.627H53.92a1.627,1.627,0,0,0,1.627-1.627v-6.5a1.627,1.627,0,0,0-1.627-1.627H51.662V18.483ZM3.255,5.617A2.365,2.365,0,0,1,5.617,3.255H49.931a2.365,2.365,0,0,1,2.363,2.362v9.611H3.255ZM26.061,24.336V18.483h3.426v5.853ZM52.293,52.293H3.255V49.045H52.293Zm-31.47-11.45V34.205H33.743v6.637a6.48,6.48,0,0,1-2.31,4.948h-8.3a6.48,6.48,0,0,1-2.31-4.948ZM38.59,34.205a1.659,1.659,0,0,1,0,3.317H37V34.205Zm9.817,11.585H35.639A9.721,9.721,0,0,0,37,40.843v-.066H38.59a4.913,4.913,0,0,0,0-9.827H19.2a1.627,1.627,0,0,0-1.627,1.627v8.265a9.721,9.721,0,0,0,1.358,4.948H7.141V18.483H22.806v7.481a1.627,1.627,0,0,0,1.627,1.627h1.721a1.627,1.627,0,0,0,3.238,0h1.721a1.627,1.627,0,0,0,1.627-1.627V18.483H48.407V45.791Z" transform="translate(0 0)" fill="#efc6ba"/>
+                                    </g>
+                                  </svg>                                  
+                            </div>
+                            <div class="services-cap">
+                                <p>We aim to provide you with everything coffee related. This includes various styles of coffee expertly prepared by our baristas, 
+                                ingredients sources locally and the use of high end machinery.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-12">
+                        <div class="single-services1">
+                            <div class="services-ion">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="53.354" height="55.548" viewBox="0 0 53.354 55.548">
+                                    <g id="services3" transform="translate(0)">
+                                      <g id="Group_295" data-name="Group 295" transform="translate(40.126 0)">
+                                        <g id="Group_294" data-name="Group 294">
+                                          <path id="Path_230" data-name="Path 230" d="M383.3,1.358a1.785,1.785,0,0,0-.1-.316,1.719,1.719,0,0,0-.155-.29,1.615,1.615,0,0,0-.209-.257,1.721,1.721,0,0,0-.257-.211,1.738,1.738,0,0,0-.292-.155,1.706,1.706,0,0,0-.316-.1,1.67,1.67,0,0,0-.66,0,1.787,1.787,0,0,0-.316.1,1.712,1.712,0,0,0-.29.155,1.712,1.712,0,0,0-.468.468,1.721,1.721,0,0,0-.155.29,1.793,1.793,0,0,0-.1.316,1.694,1.694,0,0,0-.032.331,1.673,1.673,0,0,0,.032.329,1.694,1.694,0,0,0,.1.316,1.676,1.676,0,0,0,.155.292,1.724,1.724,0,0,0,.211.257,1.626,1.626,0,0,0,.257.209,1.717,1.717,0,0,0,.29.155,1.784,1.784,0,0,0,.316.1,1.7,1.7,0,0,0,.331.034,1.664,1.664,0,0,0,.329-.034,1.7,1.7,0,0,0,.316-.1,1.726,1.726,0,0,0,.292-.155,1.639,1.639,0,0,0,.466-.466,1.67,1.67,0,0,0,.155-.292,1.708,1.708,0,0,0,.1-.316,1.631,1.631,0,0,0,0-.66Z" transform="translate(-379.959 0.001)" fill="#efc6ba"/>
+                                        </g>
+                                      </g>
+                                      <g id="Group_297" data-name="Group 297" transform="translate(0 4.163)">
+                                        <g id="Group_296" data-name="Group 296">
+                                          <path id="Path_231" data-name="Path 231" d="M53.705,70.8h4.61a3.593,3.593,0,0,0,3.546-3.092L63.43,56.275a3.579,3.579,0,0,0-5.759-3.3l-.624.491.294-1.662a5.242,5.242,0,0,0-5.162-6.155h-4.96l3.206-4.623A1.689,1.689,0,0,0,47.65,39.1l-4.54,6.547H20.551A5.242,5.242,0,0,0,15.389,51.8l2.854,16.131a16.151,16.151,0,0,0,6.033,9.988H11.8a1.689,1.689,0,0,0-1.54,2.382A16.061,16.061,0,0,0,24.882,89.76H47.848A16.061,16.061,0,0,0,62.471,80.3a1.689,1.689,0,0,0-1.54-2.382H48.454A16.147,16.147,0,0,0,53.705,70.8Zm2.458-12.341,3.6-2.829a.2.2,0,0,1,.325.186L58.515,67.247a.2.2,0,0,1-.2.174H54.578ZM57.988,81.3a12.683,12.683,0,0,1-10.14,5.082H24.882A12.683,12.683,0,0,1,14.742,81.3H57.988ZM38.556,77.923H34.174A12.791,12.791,0,0,1,21.569,67.347L19.72,56.9H41.478a1.689,1.689,0,0,0,0-3.377H19.123l-.408-2.3a1.865,1.865,0,0,1,1.836-2.189H52.179a1.865,1.865,0,0,1,1.836,2.189L51.161,67.347A12.791,12.791,0,0,1,38.556,77.923Z" transform="translate(-10.11 -38.375)" fill="#efc6ba"/>
+                                        </g>
+                                      </g>
+                                      <g id="Group_299" data-name="Group 299" transform="translate(34.714 19.31)">
+                                        <g id="Group_298" data-name="Group 298">
+                                          <path id="Path_232" data-name="Path 232" d="M333.419,179.343a1.759,1.759,0,0,0-.1-.317,1.681,1.681,0,0,0-.367-.547,1.7,1.7,0,0,0-.863-.461,1.671,1.671,0,0,0-.66,0,1.59,1.59,0,0,0-.316.1,1.56,1.56,0,0,0-.292.155,1.615,1.615,0,0,0-.257.209,1.7,1.7,0,0,0-.495,1.194,1.666,1.666,0,0,0,.034.329,1.7,1.7,0,0,0,.1.316,1.667,1.667,0,0,0,.156.292,1.635,1.635,0,0,0,.466.466,1.669,1.669,0,0,0,.292.155,1.591,1.591,0,0,0,.316.1,1.632,1.632,0,0,0,.66,0,1.627,1.627,0,0,0,.316-.1,1.714,1.714,0,0,0,.29-.155,1.617,1.617,0,0,0,.257-.209,1.725,1.725,0,0,0,.211-.257,1.674,1.674,0,0,0,.155-.292,1.708,1.708,0,0,0,.1-.316,1.646,1.646,0,0,0,.032-.329A1.673,1.673,0,0,0,333.419,179.343Z" transform="translate(-330.074 -177.984)" fill="#efc6ba"/>
+                                        </g>
+                                      </g>
+                                    </g>
+                                  </svg>                                  
+                            </div>
+                            <div class="services-cap">
+                                <p>Rich, inviting, and utterly tantalizing, the aromatic taste of coffee is a sensory journey that begins with the first whiff.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-4 col-sm-12">
+                        <div class="single-services1">
+                            <div class="services-ion">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="58.489" height="55.548" viewBox="0 0 58.489 55.548">
+                                    <g id="services4" transform="translate(0)">
+                                      <path id="Path_227" data-name="Path 227" d="M15.221,256.694a17.583,17.583,0,0,0-9.961,5.137,17.583,17.583,0,0,0-5.137,9.961,11,11,0,0,0,2.886,9.479,10.593,10.593,0,0,0,7.655,3.008,13.894,13.894,0,0,0,1.824-.123,17.583,17.583,0,0,0,9.961-5.137,17.583,17.583,0,0,0,5.137-9.961A11,11,0,0,0,24.7,259.58,11,11,0,0,0,15.221,256.694ZM3.528,272.243a14.14,14.14,0,0,1,4.161-7.983,14.139,14.139,0,0,1,7.983-4.161,10.337,10.337,0,0,1,1.356-.091,7.385,7.385,0,0,1,4.832,1.626,7.358,7.358,0,0,1-1.994.7,9.36,9.36,0,0,0-4.987,2.692,9.362,9.362,0,0,0-2.692,4.987,6.007,6.007,0,0,1-1.785,3.378,6.008,6.008,0,0,1-3.378,1.786,10.116,10.116,0,0,0-3.128,1.2,8.829,8.829,0,0,1-.367-4.138Zm20.652-3.635a14.14,14.14,0,0,1-4.161,7.983,14.139,14.139,0,0,1-7.983,4.161,7.831,7.831,0,0,1-6.187-1.535,7.363,7.363,0,0,1,1.994-.7,9.362,9.362,0,0,0,4.987-2.692,9.362,9.362,0,0,0,2.692-4.987,6.481,6.481,0,0,1,5.163-5.163,10.115,10.115,0,0,0,3.127-1.2A8.832,8.832,0,0,1,24.18,268.608Z" transform="translate(0 -228.732)" fill="#efc6ba"/>
+                                      <path id="Path_228" data-name="Path 228" d="M196.314,40.58a13.9,13.9,0,0,0,1.824-.123,17.583,17.583,0,0,0,9.961-5.137,17.583,17.583,0,0,0,5.137-9.961,11,11,0,0,0-2.886-9.479,11.005,11.005,0,0,0-9.479-2.886,17.583,17.583,0,0,0-9.961,5.137,17.583,17.583,0,0,0-5.137,9.961,11,11,0,0,0,2.886,9.479,10.593,10.593,0,0,0,7.656,3.008ZM209.83,24.908a14.14,14.14,0,0,1-4.161,7.983,14.14,14.14,0,0,1-7.983,4.161,7.831,7.831,0,0,1-6.187-1.535,7.361,7.361,0,0,1,1.994-.7,9.9,9.9,0,0,0,7.679-7.679,6.481,6.481,0,0,1,5.163-5.163,10.115,10.115,0,0,0,3.127-1.2A8.83,8.83,0,0,1,209.83,24.908Zm-20.652,3.635a14.14,14.14,0,0,1,4.161-7.983,14.14,14.14,0,0,1,7.983-4.161,10.335,10.335,0,0,1,1.356-.092,7.385,7.385,0,0,1,4.832,1.626,7.358,7.358,0,0,1-1.994.7,9.9,9.9,0,0,0-7.679,7.679,6.482,6.482,0,0,1-5.163,5.163,10.116,10.116,0,0,0-3.128,1.2A8.828,8.828,0,0,1,189.178,28.543Z" transform="translate(-164.442 -12.872)" fill="#efc6ba"/>
+                                      <path id="Path_229" data-name="Path 229" d="M294.143,259.58a11,11,0,0,0-9.479-2.886,18.413,18.413,0,0,0-15.1,15.1,11,11,0,0,0,2.886,9.479,10.593,10.593,0,0,0,7.655,3.008,13.9,13.9,0,0,0,1.824-.123,18.413,18.413,0,0,0,15.1-15.1A11,11,0,0,0,294.143,259.58Zm-21.172,12.663A14.992,14.992,0,0,1,285.115,260.1a10.343,10.343,0,0,1,1.356-.091,7.385,7.385,0,0,1,4.832,1.626,7.358,7.358,0,0,1-1.994.7,9.9,9.9,0,0,0-7.679,7.679,6.482,6.482,0,0,1-5.163,5.163,10.116,10.116,0,0,0-3.128,1.2A8.827,8.827,0,0,1,272.971,272.243Zm20.652-3.635a14.992,14.992,0,0,1-12.143,12.143,7.831,7.831,0,0,1-6.187-1.535,7.363,7.363,0,0,1,1.994-.7,9.9,9.9,0,0,0,7.679-7.679,6.481,6.481,0,0,1,5.163-5.163,10.116,10.116,0,0,0,3.127-1.2A8.827,8.827,0,0,1,293.623,268.608Z" transform="translate(-238.663 -228.732)" fill="#efc6ba"/>
+                                    </g>
+                                  </svg>                                  
+                            </div>
+                            <div class="services-cap">
+                                <p>Locally sourced ingredients, expert baristas and top of the line machinery ensure you will always get the experience you expect.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Gallery area-->
+        <div class="gallery-area gallery-area1 pt-90 pb-60">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 offset-xl-1 col-md-6 col-sm-6">
+                        <div class="single-gallery mb-25">
+                            <img src="{% static 'app1/images/bg-4.jpg' %}" alt class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-5">
+                        <div class="single-gallery mb-25">
+                            <img src="{% static 'app1/images/bg-2.jpg' %}" alt class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-5 offset-xl-1 col-md-5 col-sm-5">
+                        <div class="single-gallery mb-25">
+                            <img src="{% static 'app1/images/bg-1.jpg' %}" alt class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="single-gallery mb-25">
+                            <img src="{% static 'app1/images/bg-side-1.jpg' %}" alt class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Testimony section-->
+        <section class="cafe-section img" id="testimony" data-stellar-background-ratio="0.5">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-7 heading-section text-center animate fadeInUp animated">
+                        <span class="subheading">Testimony</span>
+                        <h2 class="mb-4">What our customers think</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-area testimonial-padding">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-10 col-lg-10 col-md-12">
+                            <div class="h1-testimonial-active">
+                                <!-- Single Testimonial -->
+                                <div class="single-testimonial text-center">
+                                    <div class="testimonial-caption ">
+                                        <div class="testimonial-top-cap">
+                                            <p>“The coffee here is fantastic! The baristas really know their craft and brew a consistently excellent cup every time."</p>
+                                            <br>
+                                        </div>
+                                        <!-- founder -->
+                                        <div class="testimonial-founder d-flex align-items-center justify-content-center">
+                                            <div class="founder-text">
+                                                <span>Brayden O'Brien</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Single Testimonial -->
+                                <div class="single-testimonial text-center">
+                                    <div class="testimonial-caption ">
+                                        <div class="testimonial-top-cap">
+                                            <p>“This coffee shop has become my go-to spot for studying or working. The comfortable seating and reliable Wi-Fi make it a productive environment..”</p>
+                                        </div>
+                                        <!-- founder -->
+                                        <div class="testimonial-founder d-flex align-items-center justify-content-center">
+                                            <div class="founder-text">
+                                                <span>Kennedy Walsh</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-testimonial text-center">
+                                    <div class="testimonial-caption ">
+                                        <div class="testimonial-top-cap">
+                                            <p>“The food options here are just as impressive as the coffee. The Fruitcake is fresh and mouthwatering,and the Pancakes are delicious. It's the perfect place for a quick bite.”</p>
+                                        </div>
+                                        <!-- founder -->
+                                        <div class="testimonial-founder d-flex align-items-center justify-content-center">
+                                            <div class="founder-text">
+                                                <span>Connor Kain</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-testimonial text-center">
+                                    <div class="testimonial-caption ">
+                                        <div class="testimonial-top-cap">
+                                            <p>“The pastries and baked goods here are divine. Pairing them with a cup of their rich, aromatic coffee is pure indulgence.”</p>
+                                        </div>
+                                        <!-- founder -->
+                                        <div class="testimonial-founder d-flex align-items-center justify-content-center">
+                                            <div class="founder-text">
+                                                <span>Reasonable Robert</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="single-testimonial text-center">
+                                    <div class="testimonial-caption ">
+                                        <div class="testimonial-top-cap">
+                                            <p>“I really like these coffee shops. Relaxed atmosphere and nice music. Also they have fast internet and outlets at every table. I could spend hours here, sipping my coffee and getting work done.”</p>
+                                        </div>
+                                        <!-- founder -->
+                                        <div class="testimonial-founder d-flex align-items-center justify-content-center">
+                                            <div class="founder-text">
+                                                <span>Joe Wager</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Footer section-->
+        <footer>
+            <div class="footer-wrapper gray-bg">
+                <div class="footer-area footer-padding">
+                    <div class="container">
+                        <div class="row justify-content-between align-items-center">
+                            <div class="col-lg-4 sm-text-center">
+                                <div class="footer-title text-center mb-50">
+                                    <h4>Our Location</h4>
+                                    <ul>
+                                        <li><a href="#">Rruga “Ibrahim Rugova” Tiranë, Albania</a></li>
+                                        <li><a href="#">Cel: +355 69 608 0057</a></li>
+                                        <li><a href="#">Email: decoffee@gmail.com</a></li>
+                                        <div class="footer-social pt-30">
+                                            <a href="#"><i class="fa-brands fa-facebook fa-lg"></i></a>
+                                            <a href="#"><i class="fa-brands fa-square-instagram fa-lg"></i></a>
+                                            <a href="#"><i class="fa-brands fa-google fa-lg"></i></a>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 sm-text-center">
+                                <div class="single-footer-caption mb-50">
+                                    <div class="single-footer-caption text-center mb-20">
+                                        <div class="footer-logo mb-15">
+                                            <a href="{% url 'index' %}"><img src="{% static 'app1/images/logo2_footer.png' %}" alt=""></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 sm-text-center">
+                                <div class="footer-title text-center mb-50">
+                                    <h4>Navigation</h4>
+                                    <ul>
+                                        <li>
+                                            <a href="{% url 'about' %}">About Us</a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'menu' %}">Menu</a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'blog' %}">Blog</a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'contact' %}">Contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p><span>Copyright © </span><script>document.write(new Date().getFullYear());</script><span> All rights reserved |<strong> De Coffee</strong></span></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        <script type="text/javascript">
+            $(document).ready(function(){
+               $('.h1-testimonial-active').slick({
+                  infinite: true,
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  dots: true,                   // Adds dot indicators below the slider
+                  autoplay: true,               // Enables automatic sliding
+                  autoplaySpeed: 2000, 
+               });
+            });
+    
+         </script>
+    </body>
+</html>
+
+

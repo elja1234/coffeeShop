@@ -1,0 +1,227 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="x-ua-compatible">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CAFE/Product</title>
+
+        <link rel="stylesheet" href="{% static 'app1/test.css' %}">
+
+        <!-- jQuery CDN -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">        
+        <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="header-area">
+                <div class=" image-container container-fluid">
+                    <nav class="navbar navbar-expand-sm navbar-light">
+                        <!-- Logo -->
+                        <a class="navbar-brand" href="{% url 'index' %}">
+                            <img class="image" src="{% static 'app1/images/logo (1).png' %}" alt="Logo" width="80" height="100">
+                        </a>
+    
+                        <!-- Toggle button for mobile view -->
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+    
+                        <!-- Navbar Links -->
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'index' %}">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'about' %}">About Us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'menu' %}">Menu</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'blog' %}">Blog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'contact' %}">Contact </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="hero-caption text-white text-left">
+                        <h2>Product Detail</h2>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="section1">
+            <div class="container menu-entry">
+                <div class="row">
+                    <div class="col-lg-6 mb-5 mt-5 animate fadeInUp animated">
+                        <img id="product-image" class="img-fluid" src="{{productInfo.image.url}}">
+                    </div>
+                    <div class="col-lg-6 product-details pl-md-5 animate fadeInUp animated">
+                        <p id="product-name" class="like-h3 related-coffees-header">{{productInfo.name}}</p>
+                        <p class="price" id="product-price"><span>${{productInfo.price}}</span></p>
+                        <p class="description" id="product-description">{{productInfo.description}}</p>
+                        <div class="row mt-4">
+                            <div class="col-md-6" id="product-size">
+                                <div class="form-group d-flex">
+                                    <div class="select-wrap">
+                                        <label for="select-coffee-size">Select Size</label>
+                                        <select name="" id="select-coffee-size" class="form-control">
+                                            <option value="">Small</option>
+                                            <option value="">Medium</option>
+                                            <option value="">Large</option>
+                                            <option value="">Extra Large</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-100"></div>
+                            <div class="input-group col-md-6 d-flex mb-3" id="quantity-input">
+                                <label for="quantity">Select Quantity</label>
+                                <span class="input-group-btn mr-2">
+                                    <button type="button" class="quantity-left-minus btn" data-type="minus" data-field>
+                                        <i class="fa-solid fa-minus"></i>
+                                    </button>
+                                </span>
+                                <input type="number" id="quantity" name="quantity" class="form-control input-number" value="1" min="1" max="100" step="1">
+                                <span class="input-group-btn ml-2">
+                                    <button type="button" class="quantity-right-plus btn" aria-label="Add one product instance to card" data-type="plus" data-field="">
+                                      <i class="fa-solid fa-plus" alt="plus"></i>
+                                    </button>
+                                  </span>
+                            </div>
+                        </div>
+                        <p><a id="add-product" class="btn btn-primary py-3 px-5" aria-label="Add Capuccino to your cart">Add to Cart</a></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Related-products section -->
+        <section class="bs-section related-products-section">
+            <div class="container">
+                <div class="row justify-content-center mb-5 pb-3">
+                    <div class="col-md-7 heading-section text-center">
+                        <span class="subheading">Discover</span>
+                        <h2 class="mb-4">Related products</h2>
+                    </div>
+                </div>
+                <div class="row g-4">
+                    {% for product in related_products %}
+                    <div class="col-md-3">
+                        <div class="menu-entry2">
+                            <img src="{{ product.image.url }}" alt="{{ product.name }}">
+                            <div class="text text-center pt-4">
+                                <h3>{{ product.name }}</h3>
+                                <p class="price"><span>${{ product.price }}</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="footer-wrapper gray-bg">
+                <div class="footer-area footer-padding">
+                    <div class="container">
+                        <div class="row justify-content-between align-items-center">
+                            <div class="col-lg-4 sm-text-center">
+                                <div class="footer-title text-center mb-50">
+                                    <h4>Our Location</h4>
+                                    <ul>
+                                        <li><a href="#">Rruga “Ibrahim Rugova” Tiranë, Albania</a></li>
+                                        <li><a href="#">Cel: +355 69 608 0057</a></li>
+                                        <li><a href="#">Email: decoffee@gmail.com</a></li>
+                                        <div class="footer-social pt-30">
+                                            <a href="#"><i class="fa-brands fa-facebook fa-lg"></i></a>
+                                            <a href="#"><i class="fa-brands fa-square-instagram fa-lg"></i></a>
+                                            <a href="#"><i class="fa-brands fa-google fa-lg"></i></a>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 sm-text-center">
+                                <div class="single-footer-caption mb-50">
+                                    <div class="single-footer-caption text-center mb-20">
+                                        <div class="footer-logo mb-15">
+                                            <a href="{% url 'index' %}"><img src="{% static 'app1/images/logo2_footer.png' %}" alt=""></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 sm-text-center">
+                                <div class="footer-title text-center mb-50">
+                                    <h4>Navigation</h4>
+                                    <ul>
+                                        <li>
+                                            <a href="{% url 'about' %}">About Us</a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'menu' %}">Menu</a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'blog' %}">Blog</a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'contact' %}">Contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p><span>Copyright © </span><script>document.write(new Date().getFullYear());</script><span> All rights reserved |<strong> De Coffee</strong></span></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script>
+            $(document).ready(function () {
+              var quantitiy = 0
+              $('.quantity-right-plus').click(function (e) {
+                // Stop acting like a button
+                e.preventDefault()
+                // Get the field name
+                var quantity = parseInt($('#quantity').val())
+      
+                // If is not undefined
+      
+                $('#quantity').val(quantity + 1)
+      
+                // Increment
+              })
+      
+              $('.quantity-left-minus').click(function (e) {
+                // Stop acting like a button
+                e.preventDefault()
+                // Get the field name
+                var quantity = parseInt($('#quantity').val())
+      
+                // If is not undefined
+      
+                // Increment
+                if (quantity > 1) {
+                  $('#quantity').val(quantity - 1)
+                }
+              })
+            })
+          </script>
+    </body>
+</html>
+
+

@@ -1,0 +1,1148 @@
+
+body {
+    margin: 0;
+    padding: 0;
+	font-family:"Plus Jakarta Sans", sans-serif;
+}
+
+/* Make Navbar Background Transparent */
+.navbar {
+    background-color: transparent !important;
+    position: absolute !important;
+    top: 0;
+    width: 100%;
+    z-index: 10; /* Ensure navbar stays on top */
+}
+.navbar-brand {
+    margin-left: 70px; 
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1; /* Ensure the nav items take up full space */
+    text-align: center; /* Center text within nav items */
+}
+.navbar-nav .nav-item {
+    margin: 0 60px; /* Adjust the value to increase or decrease spacing */
+
+}
+
+/* Navbar Links Styling */
+.navbar-nav .nav-link {
+    font-family: "Shippori Mincho",serif;
+    color: #ffffff !important; /* White text for better contrast */
+    font-weight: 400; /* Bold text */
+    padding: 10px 15px; /* Padding around links */
+    transition: color 0.3s ease; /* Smooth hover transition */
+    text-align: center; /* Center text in each nav item */
+    text-transform: uppercase;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #C46A49 !important; /* Gold text on hover */
+}
+
+/* Toggler Button */
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-color:white; /* Custom color for the icon */
+    width: 30px;
+    height: 3px;
+    display: inline-block;
+    position: relative;
+}
+
+.navbar-toggler-icon::before,
+.navbar-toggler-icon::after {
+    content: '';
+    background-color: white; /* Same color for the lines */
+    width: 30px;
+    height: 3px;
+    position: absolute;
+    left: 0;
+}
+
+.navbar-toggler-icon::before {
+    top: -8px;
+}
+
+.navbar-toggler-icon::after {
+    top: 8px;
+}
+
+.carousel-item {
+    height: 100vh; /* Full screen height */
+    background-size: cover; /* Ensure background covers entire area */
+    background-position: center;
+    transition-duration: 0s;
+}
+.carousel-item .subheading{
+    font-family: "Great Vibes", cursive;
+    font-size: 50px;
+    font-weight: 50;
+    color: #C46A49;
+}
+h1.mb-4 {
+    font-size: 40px;
+    text-transform: uppercase;
+    line-height: 1.5;
+    font-weight: normal;
+    letter-spacing: 1px;
+    margin-bottom: 1.5rem !important;
+    box-sizing: border-box;    
+}
+p.mb-4 {
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 350;
+    margin-bottom: 3rem !important;
+}
+.btn{
+    border-radius: 0;
+    font-size: 18px;
+}
+.btn.btn-primary {
+    background: #C46A49;
+    border: 1px solid #C46A49;
+    color: white; }
+    .btn.btn-primary:hover {
+        border: 1px solid #C46A49;
+        background: transparent;
+        color: #C46A49; }
+.p-3 {
+  padding: 1rem !important; 
+}
+.about-area {
+    position: relative;
+    background: #F6F1EA;
+    padding-top: 60px;
+    padding-bottom: 20px;
+}
+.section-title {
+    position: relative;
+    margin-bottom: 25px;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1400px) {
+    .about-area .about-caption h2 {
+        font-size:40px
+    }
+}
+.about-area .about-caption h2 {
+    font-family: "Shippori Mincho",serif;
+    font-size: 44px;
+    display: block;
+    font-weight: 300;
+    line-height: 1.4;
+    margin-bottom: 12px;
+    color: #202738;
+    margin-top: 0px;
+    font-style: normal;
+}
+.about-area .about-caption p {
+    color: #636363;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+    padding-top: 20px;
+    font-family: "Plus Jakarta Sans",sans-serif;
+    margin-bottom: 15px;
+}
+.icon1 {
+    margin-left: 430px;
+}
+.about-shape img{
+    margin-left: 200px;
+    margin-top: 50px;
+}
+.about-area .support-caption {
+    display: flex;
+    -moz-box-pack: justify;
+    justify-content: space-between;
+    margin-top: 90px
+}
+.about-area .support-caption .single-info .contents {
+    display: block;
+    overflow: hidden;
+    margin-left: 29px
+}
+.about-area .support-caption .single-info .contents h4 {
+    color: #C46A49;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 17px;
+    font-family: "Shippori Mincho",serif;
+    margin-top: 0px;
+    font-style: normal;
+}
+.about-area .support-caption .single-info .contents p {
+    color: #202738;
+    font-size: 18px;
+    line-height: 1.5;
+    display: block;
+    margin-bottom: 5px;
+    font-family: "Plus Jakarta Sans",sans-serif;
+    font-weight: normal;
+}
+.about-area .support-caption .single-info .contents span {
+    font-family: "Shippori Mincho",serif;
+    color: #636363;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    display: block;
+    line-height: 1
+}
+@media (max-width: 1600px) {
+    .compay-img {
+        padding-left:0px
+    }
+}
+.compay-img {
+    overflow: hidden;
+}
+.compay-img .row{
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+.bs-section {
+    padding: 7em 0;
+    position: relative; 
+    display: block;
+}
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto; 
+}
+.pb-3{
+    padding-bottom: 1rem !important; 
+}
+
+.row {
+  padding-bottom: 1rem !important; 
+  margin-bottom: 0rem !important;
+  -webkit-box-pack: center !important;
+  justify-content: center !important;
+}
+.heading-section {
+    z-index: 0; 
+    opacity: 1;
+    visibility: visible;
+    text-align: center !important;
+    -webkit-box-flex: 0;
+    flex: 0 0 58.33333%;
+    max-width: 58.33333%; 
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.heading-section .subheading {
+    font-size: 50px;
+    display: block;
+    font-family: "Great Vibes", cursive;
+    color: #C46A49;
+    line-height: 1;
+    margin-bottom: -30px;
+}
+.heading-section h2 {
+    z-index: -1;
+    font-size: 40px;
+    position: relative;
+    text-transform: uppercase; 
+    margin-bottom: 1.5rem !important;
+    line-height: 1.4;
+    color: #202738;
+    font-weight: 700;
+    font-family: "Shippori Mincho",serif;
+    margin-top: 0px;
+}
+.bs-section .row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.col-md-3 {
+    -webkit-box-flex: 0;
+    flex: 0 0 25%;
+    max-width: 25%; 
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px; 
+}
+.menu-entry {
+    margin-bottom: 30px; 
+    text-align: center; /* Center text inside the menu-entry */
+
+}
+.menu-entry img {
+    display: block;
+    height: 200px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%; /* Ensure images are responsive */
+    height: auto; /* Maintain aspect ratio */
+
+}
+.text-center {
+  text-align: center !important; 
+  padding-top: 1.5rem !important;
+}
+.menu-entry .text h3 {
+    font-size: 18px;
+    text-transform: uppercase; 
+    line-height: 1.4;
+    color: #202738;
+    font-weight: 400;
+    font-family: "Shippori Mincho",serif;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+.menu-entry .text .price span {
+    color: #202738;
+    font-size: 18px; 
+}
+.bs-section p{
+    margin-top: 0;
+    margin-bottom: 1rem; 
+}
+.our-services-area {
+    background-image: url(images/section-bg1.jpg);
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    padding-top: 120px;
+    padding-bottom: 80px;
+}
+.single-services1 {
+    margin-bottom: 30px;
+    text-align: center; /* Center the text and icons */
+}
+
+.our-services-area .single-services1 .services-ion {
+    margin-bottom: 19px
+}
+.our-services-area .single-services1 .services-cap p {
+    margin-bottom: 24px;
+    font-weight: 300;
+    color: #fff
+}
+p {
+    font-family: "Plus Jakarta Sans",sans-serif;
+    line-height: 1.4
+}
+.gallery-area1{
+    background-color: #F6F1EA;
+}
+.single-gallery {
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 300px; /* Set a fixed height as needed */
+
+}
+.single-gallery img {
+    width: 100%;
+    height: auto;
+    max-height: 350px; /* Set a max-height to ensure consistency */
+    object-fit: cover; /* Ensures images fill the space without being stretched */
+}
+
+.img-fluid {
+    width: 100%
+}
+.mb-5 {
+    margin-bottom: 3rem !important;
+}
+.mb-50 {
+    margin-bottom: 50px
+}
+.footer-wrapper .footer-area .footer-title h4 {
+    font-family: "Shippori Mincho",serif;
+    color: #C46A49;
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-weight: 400;
+    margin-top: 0px;
+    font-style: normal;
+}
+.justify-content-center {
+    -webkit-box-pack: center !important;
+    justify-content: center !important;
+}
+#testimony {
+    padding-bottom: 35px;
+    padding-top: 65px;
+    position: relative;
+}
+.img {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#testimony > .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #000;
+  opacity: 0.5;
+}
+.cafe-section .container .row{
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+.heading-section {
+    z-index: 0;
+  }
+.animate {
+  opacity: 1;
+  visibility: visible;
+  margin: auto;
+}
+.text-center {
+    text-align: center !important;
+  }
+.cafe-section h2 {
+  z-index: -1;
+  font-size: 40px;
+  font-weight: 700;
+  position: relative;
+  text-transform: uppercase;
+  margin-bottom: 0px !important;
+  line-height: 1.4;
+  color: #202738;
+  font-family: "Shippori Mincho",serif;
+  margin-top: 0;
+}
+.d-flex {
+    display: flex !important;
+  }
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+.container-wrap .row{
+    flex-wrap: wrap;
+}
+.no-gutters > [class*='col-'] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+.testimony {
+  background: #C46A49;
+  padding: 2em;
+  color: white;
+  border-radius: 6px;
+}
+blockquote {
+    margin: 0 0 1rem;
+  }
+blockquote p{
+    margin-top: 0;
+  margin-bottom: 1rem;
+}
+.author{
+    margin-top: 1.5rem !important;
+    display: flex !important;
+    align-self: center !important;
+}
+.col-lg {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+ }
+ .cafe-section .col-lg{
+    margin-bottom: 50px;
+ }
+.testimony.overlay {
+  position: relative;
+  z-index: 0;
+  background-color: #c97350;
+}
+footer {
+	background: #F6F1EA;
+	color: #636363;
+	padding: 60px 0 60px 0;
+}
+.footer-wrapper {
+    background: #F6F1EA
+}
+footer h3 {
+	letter-spacing:0px;
+	text-transform:none;
+    margin-top: 0;
+	font-size:18px;
+}
+footer img.logo{
+    height: 125px;
+}
+#section-counter {
+    position: relative;
+    z-index: 0; 
+    background-image: url(images/section-bg1.pg)
+}
+#section-counter .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url(images/section-bg1.jpg);
+    opacity: 0.7; 
+}
+.col-md-10{
+    position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.counter {
+    padding: 5em 0; 
+}
+.informacione {
+    font-weight: 400;
+    font-size: 17px; 
+    color: #ccbbbbc5;
+}
+.social-icons{
+	display:inline-block;
+}
+footer a{
+    transition: .3s;
+}
+ul {
+    margin: 0px;
+    padding: 0px
+}
+.footer-wrapper .footer-area .footer-title ul li {
+    margin-bottom: 12px;
+    list-style: none;
+}
+.footer-wrapper .footer-area .footer-title ul li a {
+    color: #636363;
+    font-family:"Plus Jakarta Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    text-decoration: underline transparent;
+    outline: medium none;
+    transition: all .3s ease-out 0s
+}
+.pt-30 {
+    padding-top: 30px
+}
+.footer-social a {
+    color: #202738;
+    background: rgba(255,255,255,0.06);
+    font-size: 16px;
+    display: inline-block;
+    text-align: center;
+    margin-right: 15px;
+    border-radius: 50%;
+    outline: medium none;
+    transition: all .3s ease-out 0s;
+    text-decoration: none;
+}
+.social-icons a i {
+    transition:.5s;
+ outline: none;
+}
+.social-icons i{
+	text-shadow:none;
+	color: #C46A49;
+	padding: 8px;
+	width: 28px;
+	height: 28px;
+	text-align: center;
+	font-size:16px;
+	border-radius:1px;
+}
+.image-container {
+    background-image: url(images/bg-6.jpg); /* Image path */
+    background-size: cover; /* Ensure the image covers the entire container */
+    background-position: center; /* Center the image */
+    height: 42vh; 
+    position: relative; /* Contain the absolutely positioned navbar */
+    color: #fff; /* White text */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.hero-caption {
+    margin-top: 160px; /* Offset for the navbar height */
+    padding-left: 200px;
+}
+.hero-caption h2 {
+    font-size: 4rem; /* Larger heading size */
+    font-family: "Shippori Mincho",serif;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+.owl-carousel img {
+    display: block;
+    width: 100%;    /* Makes the image take up the full width of the container */
+    height: 300px;  /* Set a fixed height for the images */
+    object-fit: cover; /* Ensures the image covers the container without distorting its aspect ratio */
+}
+
+.carousel-control-prev1, .carousel-control-next1{
+    color: #000;
+}
+.carousel-control-next-icon1, .carousel-control-prev-icon1{
+    color: #000;
+}
+.owl-carousel .owl-item {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+.carousel-caption1{
+    color: #636363;
+}
+.carousel-caption{
+    margin-bottom: 250px;
+}
+.carousel-container {
+    position: relative; /* Allows positioning of child elements */
+    max-width: 100%; /* Ensure the carousel doesn't exceed its container */
+}
+.owl-carousel {
+    width: 100%; /* Ensure the carousel fills the width */
+}
+.insta-btn {
+    position: absolute; /* Positions the button relative to the container */
+    top: 50%; /* Centers the button vertically */
+    left: 50%; /* Centers the button horizontally */
+    transform: translate(-50%, -50%); /* Corrects the position by moving it back by 50% of its own width and height */
+    background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent background */
+    padding: 10px 20px; /* Adds some padding for the button */
+    font-size: 18px; /* Adjust font size */
+    color: #c97350; /* Button text color */
+    text-decoration: none; /* Removes underline */
+    border-radius: 5px; /* Slightly rounded corners */
+	font-family:"Plus Jakarta Sans", sans-serif;
+    z-index: 10;
+}
+.insta-btn:hover {
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly change background on hover */
+}
+
+.custom-left-margin {
+    margin-left: -170px; /* Adjust this value as needed */
+    padding-right: 100px; /* Optional: to reduce space on the right */
+}
+.icon {
+    font-family: 'Flaticon'; /* Apply the font to an element */
+    font-size: 70px; /* Adjust the size as needed */
+}
+.counter .text strong.number {
+    font-weight: 400;
+    font-size: 33px;
+    color: rgba(31, 30, 30, 0.842); 
+}
+.block-18 .text span {
+    display: block; 
+}
+.counter .icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+    position: relative;
+    margin-bottom: 20px;
+    z-index: 0; 
+}
+.about-area1{
+    padding:90px 0 90px 0;
+}
+.about-area1 h2{
+    font-family: "Great Vibes", cursive;
+    font-weight: 700;
+    font-size: 45px;
+    color: #C46A49;
+}
+.spacer-half{
+	width:100%;
+	height:15px;
+	display:block;
+	clear:both;
+}
+.about-area1 p.lead{
+	color: #000;
+    font-size:20px;
+	font-weight:500;
+    font-family: Plus Jakarta Jans;
+}
+.about-area1 p{
+    color: #707070;
+    font-family: Plus Jakarta Jans;
+}
+.rounded-20{
+	border-radius:20px;
+}
+.animated{
+    animation-fill-mode: both;
+    animation-duration: 1s;
+}
+.de_count{
+    transition:.5s;
+ outline: none;
+ text-align:center;
+	padding:30px 0 30px 0;
+	background:none;
+}
+.de_count h3{
+	font-family:"Plus Jakarta Sans", sans-serif;
+	font-size:48px;
+	font-weight:600;
+    margin-top: 0;
+}
+.de_count h4{
+    font-size: 14px;
+    font-family:"Plus Jakarta Sans", sans-serif;
+    font-weight: 700;
+}
+.our-menu {
+    position: relative
+}
+.top-padding {
+    padding-top: 90px
+}
+.section-title h2 {
+    color: #202738;
+    font-family: "Shippori Mincho",serif;
+    font-size: 40px;
+    display: block;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 21px;
+    margin-top: 0px;
+    font-style: normal;
+}
+.section-title p {
+    color: #636363;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    font-family: "Plus Jakarta Sans",sans-serif;
+    margin-bottom: 15px;
+}
+.small-title h4 {
+    color: #C46B48;
+    font-size: 34px;
+    display: block;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 26px;
+    font-family: "Great Vibes",cursive;
+    margin-top: 0px;
+    font-style: normal;
+}
+.our-menu .menu-items {
+    margin-bottom: 25px
+}
+.our-menu .menu-items .menu-left {
+    margin-bottom: 6px
+}
+.our-menu .menu-items .menu-left .menu-title h4 {
+    font-family: "Shippori Mincho",serif;
+    color: #636363;
+    transition: all .4s ease-out 0s;
+    font-size: 17px;
+    margin-bottom: 1px;
+    font-weight: 700;
+    display: inline-block;
+    line-height: 1.6;
+    margin-top: 0px;
+    font-style: normal;
+}
+.our-menu .menu-items .menu-left .menu-title h4 span {
+    color: #C46B48;
+    margin-bottom: 0;
+    font-size: 18px;
+    font-weight: 700;
+    display: inline-block
+}
+.our-menu .menu-items .menu p {
+    margin-bottom: 0;
+    color: #636363;
+    font-size: 16px;
+    font-weight: 300;
+    font-family: "Plus Jakarta Sans",sans-serif;
+    line-height: 1.4;
+}
+.our-menu .menu-shape {
+    position: absolute;
+    left: 220px;
+    top: 44px;
+}
+.gallery-area.gallery-area2 {
+    margin: 0
+}
+.pb-60 {
+    padding-bottom: 60px
+}
+.pt-90 {
+    padding-top: 90px
+}
+.form-heading h5{
+    font-size: 37px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-top: 40px !important;
+    font-family: "Great Vibes", cursive;
+    color: #C46A49;
+    margin-top: 0px;
+    font-style: normal;
+}
+.form-main {
+    margin-top: 30px;
+}
+.form-input-field {
+    margin-bottom: 26px;
+}
+.form-input-field input[type="text"] {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #e5e6e9;
+    background-color: transparent;
+    font-size: 13px;
+	font-family:"Plus Jakarta Sans", sans-serif;
+    font-weight: 600;
+    color: #171717;
+}
+.get-in-touch-form-section .form-textarea textarea {
+    min-height: 115px;
+}
+.form-textarea textarea {
+    width: 100%;
+    background-color: transparent;
+    border: 1px solid #e5e6e9;
+    font-size: 13px;
+    padding: 15px;
+    font-family:"Plus Jakarta Sans", sans-serif;
+    font-weight: 600;
+    min-height: 200px;
+}
+.get-in-touch-form-section .form-main button.btn {
+    background-color: #C46B48;
+    color: #fff;
+    padding: 12px 50px;
+    margin-top: 26px;
+}
+.form-submit-btn button.btn {
+    background-color: #C46B48;
+    border-radius: 0;
+    color: #fff;
+    padding: 20px 52px;
+    margin-top: 14px;
+    margin-bottom: 30px;
+    font-family: "Shippori Mincho",serif;
+    font-weight: 400;
+    font-size: 15px;
+    border: 1px solid #C46B48;
+}
+.contact-info-inner {
+    padding-right: 60px;
+    padding-top: 160px;
+}
+.contact-content {
+    padding: 15px 0px;
+    border-top: 1px solid #eee;
+}
+.contact-content span {
+    font-size: 14px;
+    font-family:"Plus Jakarta Sans", sans-serif;
+    font-weight: 500;
+    color: #989898;
+}
+.contact-content{
+    display: flex;
+}
+.contact-info__icon {
+    margin-right: 20px;
+}
+iframe {
+    display: block; /* This removes any extra inline spacing */
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+#content {
+	width:100%;
+	background:#fff;
+	padding:90px 0 90px 0;
+}
+.blog-list {
+	margin: 0;
+	padding: 0;
+}
+.blog-item{
+    margin-bottom:30px !important;
+}
+.blog-list .date-box {
+	width: 74px;
+	padding: 15px 5px 0 5px;
+	position: absolute;
+	text-align: center;
+	text-shadow:none;
+	border: solid 2px #c97350;
+}
+.blog-list .date-box .day{
+	font-weight:600;
+	font-size: 36px;
+	padding-bottom:0px;
+	color:#9c1126;
+    font-family: "Great Vibes", cursive;
+    display: block;
+	text-align:center;
+	width:60px;
+}
+.blog-list .date-box .month {
+	color:#9c1126;
+    font-family: "Great Vibes", cursive;
+	font-weight:600;
+	padding:7px 0 7px 5px;
+    font-size: 25px;
+    display: block;
+	text-align:center;
+	width:60px;
+}
+.blog-list .post-text{
+	padding-left:100px;
+}
+.blog-list h3 {
+	color: #333;
+	letter-spacing:normal;
+	text-transform:none;
+    margin-top:20px;
+    font-size:18px;
+    font-family: "Shippori Mincho",serif;
+    font-weight: 700;
+}
+.blog-list h3 a{
+	color:#111;
+    text-decoration:none;
+}
+a.btn-custom{
+    background-color: #9c1126;
+}
+.btn-custom, a.btn-custom{
+    font-family: "Shippori Mincho",serif;
+    color:#fff;
+    background-color: #9c1126;
+    border-radius:60px;
+    padding:8px 30px 8px 30px;
+    font-weight:bold;
+    font-size:14px;
+    text-decoration:none;
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+    position: relative;
+    margin-left: 400px;
+    margin-right: 400px;
+  }
+  
+  /* Slides */
+  .mySlides {
+    display: none;
+    padding: 80px;
+    text-align: center;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -30px;
+    padding: 16px;
+    color: #888;
+    font-weight: normal;
+    font-size: 20px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    text-decoration: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    position: absolute;
+    right:0;
+    border-radius: 3px 0 0 3px;
+  }
+  /* Add a blue color to the author */
+  .author1 {
+    color: #C46A49;
+    text-align: center;
+    padding-top: 20px;
+}
+.slideshow-container a:hover{
+    text-decoration: none;
+}
+.testimonial-top-cap p{
+    font-size: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+.founder-text span{
+    color: #C46A49;
+    font-size: 18px;
+}
+#product-image{
+    display: block;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    /*width: 100% !important; /* Ensure images are responsive */
+    /*height: auto !important; /* Maintain aspect ratio */
+    width: 500px;
+    height: 500px;
+}
+.section1 {
+    padding: 7em 0;
+    position: relative;
+    background-color: #F6F1EA;
+}
+#product-name {
+    color: #9c1126;
+    display: block;
+    min-height: 44px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-family: "Shippori Mincho",serif;
+}
+.product-details .price span {
+    font-size: 30px;
+    color: #C46B48;
+    font-family: "Shippori Mincho",serif;
+}
+.product-details .form-group {
+    position: relative;
+}
+.product-details .form-group .select-wrap {
+    position: relative;
+}
+.product-details .form-group .select-wrap select {
+    font-size: 14px;
+}
+.product-details .form-group .form-control {
+    padding-right: 40px;
+    height: 54px !important;
+    text-align: center;
+    border: 1px solid #333 !important;
+    color: #C46A49 !important;
+    padding: 10px 20px;
+}
+#select-coffee-size option {
+    color: #151111;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+#quantity-input label {
+    width: 100%;
+}
+.input-group-btn{
+    color: #bfbfbf;
+}
+.product-details .quantity-left-minus {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 16px 20px;
+}
+.product-details button {
+  height: 54px !important;
+  text-align: center;
+  border: 1px solid #333 !important;
+  color: #C46A49 !important;
+  padding: 10px 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+.product-details .form-control {
+    height: 54px !important;
+    text-align: center;
+    border: 1px solid #333 !important;
+    color: #C46A49 !important;
+    padding: 10px 20px;
+}
+#quantity{
+    border-radius: 0.25rem;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.menu-entry1 {
+    margin: 20px; /* Adjust the spacing between items */
+}
+
+.menu-entry1 img {
+    width: 300px; /* Make images responsive and fill the container */
+    height: 300px; /* Set a fixed height for all images */
+    object-fit: cover; /* Ensures images cover the entire area without distortion */
+}
+.menu-entry2 {
+    margin: 20px; /* Adjust the spacing between items */
+}
+
+.menu-entry2 img {
+    width: 100%; /* Make images responsive and fill the container */
+    height: 200px; /* Set a fixed height for all images */
+    object-fit: cover; /* Ensures images cover the entire area without distortion */
+}
+.menu-entry1 .text h3 {
+    font-size: 18px;
+    text-transform: uppercase; 
+    line-height: 1.4;
+    color: #202738;
+    font-weight: 400;
+    font-family: "Shippori Mincho",serif;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+.menu-entry1 .text .price span {
+    color: #202738;
+    font-size: 18px; 
+}
+.product-details button {
+    height: 54px !important;
+    text-align: center;
+    border: 1px solid #333 !important;
+    color: #C46A49 !important;
+    padding: 10px 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+.menu-entry2 .text h3 {
+    font-size: 18px;
+    text-transform: uppercase; 
+    line-height: 1.4;
+    color: #202738;
+    font-weight: 400;
+    font-family: "Shippori Mincho",serif;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+.menu-entry2 .text .price span {
+    color: #202738;
+    font-size: 18px; 
+}

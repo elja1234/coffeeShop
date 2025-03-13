@@ -1,0 +1,317 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="x-ua-compatible">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CAFE/About</title>
+
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="{% static 'app1/test.css' %}">
+        <link rel="stylesheet" href="{% static 'app1/flaticon.css' %}">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">        
+        <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+
+
+
+        <!-- Owl Carousel CSS -->
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+         <!-- jQuery (necessary for Owl Carousel) -->
+          <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+          <!-- Owl Carousel JS -->
+           <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+    </head>
+    <body>
+        <header>
+            <div class="header-area">
+                <div class=" image-container container-fluid">
+                    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+                        <!-- Logo -->
+                        <a class="navbar-brand" href="{% url 'index' %}">
+                            <img class="image" src="{% static 'app1/images/logo (1).png' %}" alt="Logo" width="80" height="100">
+                        </a>
+    
+                        <!-- Toggle button for mobile view -->
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+    
+                        <!-- Navbar Links -->
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'index' %}">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'about' %}">About Us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'menu' %}">Menu</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'blog' %}">Blog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'contact' %}">Contact </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="hero-caption text-white text-left">
+                        <h2>About Us</h2>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--About us-->
+        <section class="about-area1">
+            <div class="container">
+                <div class="row gx-5 align-items-center">
+                    <div class="col-lg-6">
+                        <h2>How it begins</h2>
+                        <div class="spacer-half"></div>
+                        <p class="lead">
+                            At "De Coffe" we believe in the power of good coffee and warm hospitality. Our journey began with a simple vision: to create a welcoming space where friends, 
+                            families, and strangers alike could come together to enjoy delicious beverages, homemade treats, and meaningful connections.
+                        </p>
+                        <p>
+                            Nestled in the heart of our community, "De Coffe" is more than just a café; it's a gathering place, a refuge from the chaos of everyday life, 
+                            and a beacon of positivity and warmth. From the moment you walk through our doors, you're greeted with the inviting aroma of freshly brewed 
+                            coffee and the friendly smiles of our dedicated team. Our menu is a reflection of our commitment to quality and creativity. We source the 
+                            finest beans from around the world and carefully craft each cup with precision and care. Whether you're craving a classic espresso, 
+                            a creamy latte, or a refreshing iced tea, we have something to delight every palate.
+                        </p>
+                        <p>
+                            As a proud member of the community, we're committed to giving back and making a positive impact wherever we can. 
+                            We believe in using our platform to spread joy and goodwill in our neighborhood and beyond.
+                        </p>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="row">
+                            <div class="col-6">
+                                <img src="{% static 'app1/images/2.jpg' %}" class="img-fluid rounded-20 wow zoomIn animated" alt style="visibility: visible;animation-name: zoomIn;">
+                                <div class="de_count wow fadeInUp">
+                                    <h3><span class="timer" data-to="650" data-speed="3000">0</span>+</h3>
+                                    <h4>Positive feedbacks</h4>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="de_count wow fadeInUp">
+                                    <h3><span class="timer" data-to="40" data-speed="3000">0</span>%</h3>
+                                    <h4>Turnover increased</h4>
+                                </div>
+                                <img src="{% static 'app1/images/1.jpg' %}" class="img-fluid rounded-20 wow zoomIn" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Counter-->
+        <section class="counter bg-dark img" id="section-counter" data-stellar-background-ratio="0.5">
+            <div class="overlay"></div>
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-md-10">
+                        <div class="row">
+                            <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap animate">
+                                <div class="block-18 text-center">
+                                    <div class="text">
+                                        <div class="icon">
+                                            <span class="flaticon-coffee-cup"></span>
+                                        </div>
+                                        <strong class="number" data-number="18">18</strong>
+                                        <span class="informacione">Shops</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap animate">
+                                <div class="block-18 text-center">
+                                    <div class="text">
+                                        <div class="icon">
+                                            <span class="flaticon-coffee-cup"></span>
+                                        </div>
+                                        <strong class="number" data-number="6">6</strong>
+                                        <span class="informacione">Years of experience</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap animate">
+                                <div class="block-18 text-center">
+                                    <div class="text">
+                                        <div class="icon">
+                                            <span class="flaticon-coffee-cup"></span>
+                                        </div>
+                                        <strong class="number" data-number="10567">10,567</strong>
+                                        <span class="informacione">Happy Customers</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 col-lg-3 d-flex justify-content-center counter-wrap animate">
+                                <div class="block-18 text-center">
+                                    <div class="text">
+                                        <div class="icon">
+                                            <span class="flaticon-coffee-cup"></span>
+                                        </div>
+                                        <strong class="number" data-number="300">300</strong>
+                                        <span class="informacione">Staff</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Carousel-->
+        <div class="carousel-container">
+            <div class="owl-carousel owl-theme">
+                <div class="item">
+                    <img src="{% static 'app1/images/1.jpg' %}" alt="Image 1">
+                </div>
+                <div class="item">
+                    <img src="{% static 'app1/images/2.jpg' %}" alt="Image 2">
+                </div>
+                <div class="item">
+                    <img src="{% static 'app1/images/4.jpg' %}" alt="Image 3">
+                </div>
+                <div class="item">
+                    <img src="{% static 'app1/images/menu-1.jpg' %}" alt="Image 4">
+                </div>
+                <div class="item">
+                    <img src="{% static 'app1/images/slide-2.jpg' %}" alt="Image 5">
+                </div>
+            </div>
+            <a href="#" class="insta-btn">@de_coffee98</a>
+        </div>
+        <!--Footer section-->
+        <footer>
+            <div class="footer-wrapper gray-bg">
+                <div class="footer-area footer-padding">
+                    <div class="container">
+                        <div class="row justify-content-between align-items-center">
+                            <div class="col-lg-4 sm-text-center">
+                                <div class="footer-title text-center mb-50">
+                                    <h4>Our Location</h4>
+                                    <ul>
+                                        <li><a href="#">Rruga “Ibrahim Rugova” Tiranë, Albania</a></li>
+                                        <li><a href="#">Cel: +355 69 608 0057</a></li>
+                                        <li><a href="#">Email: decoffee@gmail.com</a></li>
+                                        <div class="footer-social pt-30">
+                                            <a href="#"><i class="fa-brands fa-facebook fa-lg"></i></a>
+                                            <a href="#"><i class="fa-brands fa-square-instagram fa-lg"></i></a>
+                                            <a href="#"><i class="fa-brands fa-google fa-lg"></i></a>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 sm-text-center">
+                                <div class="single-footer-caption mb-50">
+                                    <div class="single-footer-caption text-center mb-20">
+                                        <div class="footer-logo mb-15">
+                                            <a href="{% url 'index' %}"><img src="{% static 'app1/images/logo2_footer.png' %}" alt=""></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 sm-text-center">
+                                <div class="footer-title text-center mb-50">
+                                    <h4>Navigation</h4>
+                                    <ul>
+                                        <li>
+                                            <a href="{% url 'about' %}">About Us</a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'menu' %}">Menu</a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'blog' %}">Blog</a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'contact' %}">Contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p><span>Copyright © </span><script>document.write(new Date().getFullYear());</script><span> All rights reserved |<strong> De Coffee</strong></span></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script>
+            $(document).ready(function(){
+              $(".owl-carousel").owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: false,
+                autoplay: true,
+                autoplayTimeout: 3000,
+                autoplayHoverPause: true,
+                items: 3,  // Change the number to adjust the number of items visible at once
+                center: true, // Centers the active item
+                responsive: {
+                  0: {
+                    items: 1
+                  },
+                  600: {
+                    items: 3
+                  },
+                  1000: {
+                    items: 5
+                  }
+                }
+              });
+            });
+
+
+
+            document.addEventListener("DOMContentLoaded", function() {
+    const counters = document.querySelectorAll(".timer");
+    const speed = 2000; // Total duration for the animation in milliseconds (2 seconds)
+
+    counters.forEach((counter) => {
+        const target = +counter.getAttribute("data-to"); // Final number to reach
+        const frameDuration = 50; // Time per frame in ms (smoothness)
+        const totalFrames = speed / frameDuration; // Total number of frames (smoothness)
+        const increment = target / totalFrames; // Calculate increment for each frame
+
+        const updateCount = () => {
+            const current = +counter.innerText; // Current number displayed
+
+            if (current < target) {
+                counter.innerText = Math.ceil(current + increment); // Increment the counter
+                setTimeout(updateCount, frameDuration); // Repeat every frameDuration ms
+            } else {
+                counter.innerText = target; // Ensure the final value is reached
+            }
+        };
+
+        updateCount(); // Start the counting animation
+    });
+});
+
+
+
+            </script>
+
+            
+    </body>
+</html>

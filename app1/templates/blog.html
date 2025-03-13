@@ -1,0 +1,230 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="x-ua-compatible">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CAFE/Blog</title>
+
+        <link rel="stylesheet" href="{% static 'app1/test.css' %}">
+
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">        
+        <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="header-area">
+                <div class=" image-container container-fluid">
+                    <nav class="navbar navbar-expand-sm navbar-light">
+                        <!-- Logo -->
+                        <a class="navbar-brand" href="{% url 'index' %}">
+                            <img class="image" src="{% static 'app1/images/logo (1).png' %}" alt="Logo" width="80" height="100">
+                        </a>
+    
+                        <!-- Toggle button for mobile view -->
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+    
+                        <!-- Navbar Links -->
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'index' %}">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'about' %}">About Us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'menu' %}">Menu</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'blog' %}">Blog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'contact' %}">Contact </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="hero-caption text-white text-left">
+                        <h2>Blog</h2>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--Content section-->
+        <div id="content" class="no-bottom no-top">
+            <section id="section-book-form">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 blog-list">
+                            <div class="blog-item row align-items-center g-3 gx-5">
+                                <div class="col-md-5">
+                                    <div class="post-content">
+                                        <div class="date-box">
+                                            <div class="day">28</div>
+                                            <div class="month">May</div>
+                                        </div>
+                                        <div class="post-text">
+                                            <h3><a href="#">10 Benefits of Drinking Coffee Every Day</a></h3>
+                                            <p>Coffee isn't just a beloved morning ritual. It's packed with 
+                                                antioxidants and essential nutrients that can benefit your health. 
+                                                Studies show that regular coffee drinkers have a lower risk of 
+                                                serious diseases like Alzheimer's, heart disease, and certain cancers. 
+                                                Plus, the caffeine boost improves mental alertness and enhances physical 
+                                                performance. Join us in celebrating the many reasons why coffee should 
+                                                be a staple in your daily routine.
+                                            </p>
+                                            <a href="#" class="btn-custom">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <img src="{% static 'app1/images/pic-blog-1.jpg' %}" class="rounded-20 img-fluid" alt="">
+                                </div>
+                            </div>
+                            <div class="blog-item row align-items-center g-3 gx-5">
+                                <div class="col-md-7">
+                                    <img src="{% static 'app1/images/pic-blog-2.jpg' %}" class="rounded-20 img-fluid" alt="">
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="post-content">
+                                        <div class="date-box">
+                                            <div class="day">26</div>
+                                            <div class="month">June</div>
+                                        </div>
+                                        <div class="post-text">
+                                            <h3><a href="#">Coffee and Celebrations: How Coffee Fits Into Festivities</a></h3>
+                                            <p>From energizing late-night parties to casual coffee catch-ups, coffee plays a 
+                                                central role in many celebrations. Whether you're clinking espresso cups or 
+                                                creating decadent coffee-based desserts, this beloved drink has a way of bringing 
+                                                people together. In this blog, we explore how coffee can enhance your next gathering 
+                                                and share creative ways to include coffee in your party plans.
+                                            </p>
+                                            <a href="#" class="btn-custom">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blog-item row align-items-center g-3 gx-5">
+                                <div class="col-md-5">
+                                    <div class="post-content">
+                                        <div class="date-box">
+                                            <div class="day">24</div>
+                                            <div class="month">July</div>
+                                        </div>
+                                        <div class="post-text">
+                                            <h3><a href="#">Why Coffee Shops Are the Best Place to Connect</a></h3>
+                                            <p>Coffee shops have become more than just a place to grab your daily 
+                                                caffeine fix. They serve as social hubs where friends meet, business 
+                                                deals are made, and creative ideas are born. The cozy environment, 
+                                                combined with the aroma of fresh coffee, makes it the perfect space 
+                                                to connect and unwind. Find out how coffee shops have evolved into 
+                                                modern-day gathering spots, bringing people together from all walks of life.
+                                            </p>
+                                            <a href="#" class="btn-custom">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-7">
+                                    <img src="{% static 'app1/images/6.jpg' %}" class="rounded-20 img-fluid" alt="">
+                                </div>
+                            </div>
+                            <div class="blog-item row align-items-center g-3 gx-5">
+                                <div class="col-md-7">
+                                    <img src="{% static 'app1/images/pic-blog-4.jpg' %}" class="rounded-20 img-fluid" alt="">
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="post-content">
+                                        <div class="date-box">
+                                            <div class="day">22</div>
+                                            <div class="month">August</div>
+                                        </div>
+                                        <div class="post-text">
+                                            <h3><a href="#">The Perfect Coffee and Donut Pairing Guide</a></h3>
+                                            <p>Donuts and coffee are a match made in heaven. But did you know 
+                                                that the right coffee can elevate the flavor of your favorite 
+                                                donut? From pairing a light latte with a sugar-glazed donut to 
+                                                enjoying a bold espresso with a chocolate frosted delight, the 
+                                                combinations are endless. Dive into our guide to discover the 
+                                                ultimate coffee and donut pairings for every craving.
+                                            </p>
+                                            <a href="#" class="btn-custom">Read More</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!--Footer section-->
+        <footer>
+            <div class="footer-wrapper gray-bg">
+                <div class="footer-area footer-padding">
+                    <div class="container">
+                        <div class="row justify-content-between align-items-center">
+                            <div class="col-lg-4 sm-text-center">
+                                <div class="footer-title text-center mb-50">
+                                    <h4>Our Location</h4>
+                                    <ul>
+                                        <li><a href="#">Rruga “Ibrahim Rugova” Tiranë, Albania</a></li>
+                                        <li><a href="#">Cel: +355 69 608 0057</a></li>
+                                        <li><a href="#">Email: decoffee@gmail.com</a></li>
+                                        <div class="footer-social pt-30">
+                                            <a href="#"><i class="fa-brands fa-facebook fa-lg"></i></a>
+                                            <a href="#"><i class="fa-brands fa-square-instagram fa-lg"></i></a>
+                                            <a href="#"><i class="fa-brands fa-google fa-lg"></i></a>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 sm-text-center">
+                                <div class="single-footer-caption mb-50">
+                                    <div class="single-footer-caption text-center mb-20">
+                                        <div class="footer-logo mb-15">
+                                            <a href="{% url 'index' %}"><img src="{% static 'app1/images/logo2_footer.png' %}" alt=""></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 sm-text-center">
+                                <div class="footer-title text-center mb-50">
+                                    <h4>Navigation</h4>
+                                    <ul>
+                                        <li>
+                                            <a href="{% url 'about' %}">About Us</a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'menu' %}">Menu</a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'blog' %}">Blog</a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'contact' %}">Contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p><span>Copyright © </span><script>document.write(new Date().getFullYear());</script><span> All rights reserved |<strong> De Coffee</strong></span></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>

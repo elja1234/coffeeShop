@@ -1,0 +1,242 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="x-ua-compatible">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CAFE/Contact</title>
+
+        <link rel="stylesheet" href="{% static 'app1/test.css' %}">
+
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">        
+        <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <div class="header-area">
+                <div class=" image-container container-fluid">
+                    <nav class="navbar navbar-expand-sm navbar-light">
+                        <!-- Logo -->
+                        <a class="navbar-brand" href="{% url 'index' %}">
+                            <img class="image" src="{% static 'app1/images/logo (1).png' %}" alt="Logo" width="80" height="100">
+                        </a>
+    
+                        <!-- Toggle button for mobile view -->
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+    
+                        <!-- Navbar Links -->
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'index' %}">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'about' %}">About Us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'menu' %}">Menu</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'blog' %}">Blog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'contact' %}">Contact </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="hero-caption text-white text-left">
+                        <h2>Contact Us</h2>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--Contact section-->
+        <div class="contact-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 col-md-5 col-sm-12">
+                        <div class="contact-info">
+                            <div class="contact-info-inner">
+                                <div class="contact-content">
+                                    <span class="contact-info__icon">
+                                        <i class="fa-solid fa-house fa-2xl" style="color: #8f9195;"></i>
+                                    </span>
+                                    <div>
+                                        <span> Rruga “Ibrahim Rugova” Tiranë, Albania</span>
+                                    </div>
+                                </div>
+                                <div class="contact-content">
+                                    <span class="contact-info__icon">
+                                        <i class="fa-solid fa-phone fa-2xl"></i>
+                                    </span>
+                                    <div>
+                                        <span> +355 69 608 0057</span>
+                                    </div>
+                                </div>
+                                <div class="contact-content">
+                                    <span class="contact-info__icon">
+                                        <i class="fa-regular fa-envelope fa-2xl"></i>
+                                    </span>
+                                    <div>
+                                        <a><span> decoffee@gmail.com</span></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-7 col-sm-12">
+                        <div class="get-in-touch-form-section">
+                            <div class="form-heading">
+                                <h5>Get in touch</h5>
+                            </div>
+                            <form class="contact-form" action="{% url 'save_contact' %}" method="post">
+                                {% csrf_token %}
+                                <div class="form-main">
+                                    <div class="row">
+                                        <div class="col-lg-6 col-md-3 col-sm-6">
+                                            <div class="form-input-field">
+                                                <input type="text" name="first_name" placeholder="First Name*" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-3 col-sm-6">
+                                            <div class="form-input-field">
+                                                <input type="text" name="last_name" placeholder="Last Name*" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-3 col-sm-6">
+                                            <div class="form-input-field">
+                                                <input type="text" name="email" placeholder="Email Address*" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-md-3 col-sm-6">
+                                            <div class="form-input-field">
+                                                <input type="text" name="phone_number" placeholder="Phone Number*" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12 col-sm-12">
+                                            <div class="form-textarea">
+                                                <textarea name="message" placeholder="Type message*" required></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-submit-btn">
+                                        <button type="submit" class="btn">SEND MESSAGE</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Map section-->
+        <div class="google-maps-section">
+            <div class="gm-inner">
+                <div class="mapouter">
+                    <div class="gmap_canvas">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2996.369979233132!2d19.8177214!3d41.3225675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13503102d396c947%3A0x399d4f9a7d3d29bc!2sRruga%20Ibrahim%20Rugova%2C%20Tirana!5e0!3m2!1sen!2s!4v1726693197363!5m2!1sen!2s" width="100%" height="400px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Footer section-->
+        <footer>
+            <div class="footer-wrapper gray-bg">
+                <div class="footer-area footer-padding">
+                    <div class="container">
+                        <div class="row justify-content-between align-items-center">
+                            <div class="col-lg-4 sm-text-center">
+                                <div class="footer-title text-center mb-50">
+                                    <h4>Our Location</h4>
+                                    <ul>
+                                        <li><a href="#">Rruga “Ibrahim Rugova” Tiranë, Albania</a></li>
+                                        <li><a href="#">Cel: +355 69 608 0057</a></li>
+                                        <li><a href="#">Email: decoffee@gmail.com</a></li>
+                                        <div class="footer-social pt-30">
+                                            <a href="#"><i class="fa-brands fa-facebook fa-lg"></i></a>
+                                            <a href="#"><i class="fa-brands fa-square-instagram fa-lg"></i></a>
+                                            <a href="#"><i class="fa-brands fa-google fa-lg"></i></a>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 sm-text-center">
+                                <div class="single-footer-caption mb-50">
+                                    <div class="single-footer-caption text-center mb-20">
+                                        <div class="footer-logo mb-15">
+                                            <a href="{% url 'index' %}"><img src="{% static 'app1/images/logo2_footer.png' %}" alt=""></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 sm-text-center">
+                                <div class="footer-title text-center mb-50">
+                                    <h4>Navigation</h4>
+                                    <ul>
+                                        <li>
+                                            <a href="{% url 'about' %}">About Us</a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'menu' %}">Menu</a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'blog' %}">Blog</a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'contact' %}">Contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p><span>Copyright © </span><script>document.write(new Date().getFullYear());</script><span> All rights reserved |<strong> De Coffee</strong></span></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <script>
+            document.querySelector('.contact-form').addEventListener('submit', function (event) {
+                // Prevent form from submitting automatically
+                event.preventDefault();
+        
+                // Get all required fields
+                var requiredFields = document.querySelectorAll('.contact-form [required]');
+                var allFilled = true;
+        
+                // Check if all required fields are filled
+                requiredFields.forEach(function (field) {
+                    if (!field.value.trim()) {
+                        allFilled = false;
+                        field.classList.add('error'); // Add error class if a field is empty
+                    } else {
+                        field.classList.remove('error'); // Remove error class if a field is filled
+                    }
+                });
+        
+                if (allFilled) {
+                    alert('Message successfully sent!');
+                    // Here you can trigger the form submission or any further processing
+                    document.querySelector('.contact-form').submit();
+                } else {
+                    alert('Please fill out all required fields.');
+                }
+            });
+        </script>
+    </body>
+</html>

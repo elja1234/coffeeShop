@@ -1,0 +1,335 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="x-ua-compatible">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CAFE/Menu</title>
+
+        <link rel="stylesheet" href="{% static 'app1/test.css' %}">
+
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+
+        <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">        
+        <link href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+
+    </head>
+    <body>
+        <header>
+            <div class="header-area">
+                <div class=" image-container container-fluid">
+                    <nav class="navbar navbar-expand-sm navbar-light">
+                        <!-- Logo -->
+                        <a class="navbar-brand" href="{% url 'index' %}">
+                            <img class="image" src="{% static 'app1/images/logo (1).png' %}" alt="Logo" width="80" height="100">
+                        </a>
+    
+                        <!-- Toggle button for mobile view -->
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+    
+                        <!-- Navbar Links -->
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'index' %}">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'about' %}">About Us</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'menu' %}">Menu</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'blog' %}">Blog</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{% url 'contact' %}">Contact </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="hero-caption text-white text-left">
+                        <h2>Our Menu</h2>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--Menu section-->
+        <section class="our-menu top-padding">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-7 col-lg-8 col-md-8">
+                        <div class="section-title mb-50 text-center">
+                            <h2>Discover Our Delicious Offerings</h2>
+                            <p>Explore our curated selection of coffee, drinks, and fast food that satisfies all your cravings. 
+                                Enjoy quality ingredients and delightful flavors.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-between">
+                    <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-6 offset-xxl-1">
+                        <div class="small-title">
+                            <h4>Coffee</h4>
+                        </div>
+                        <div class="menu-items">
+                            <div class="menu-left">
+                                <div class="menu-title">
+                                    <h4>Espresso ……………………<span>($3)</span></h4>
+                                </div>
+                            </div>
+                            <div class="menu">
+                                <p>A rich and bold shot of coffee.</p>
+                            </div>
+                        </div>
+                        <div class="menu-items">
+                            <div class="menu-left">
+                                <div class="menu-title">
+                                    <h4>Coffee Cappuccino ……………………<span>($3.9)</span></h4>
+                                </div>
+                            </div>
+                            <div class="menu">
+                                <p>Good espresso, even better foam on top</p>
+                            </div>
+                        </div>
+                        <div class="menu-items">
+                            <div class="menu-left">
+                                <div class="menu-title">
+                                    <h4>Creamy Latte ……………………<span>($3.9)</span></h4>
+                                </div>
+                            </div>
+                            <div class="menu">
+                                <p>Classic espresso, infused with the kind of milk you love</p>
+                            </div>
+                        </div>
+                        <div class="menu-items">
+                            <div class="menu-left">
+                                <div class="menu-title">
+                                    <h4>Americano ……………………<span>($2.5)</span></h4>
+                                </div>
+                            </div>
+                            <div class="menu">
+                                <p>The classic.The legend.</p>
+                            </div>
+                        </div>
+                        <div class="menu-items">
+                            <div class="menu-left">
+                                <div class="menu-title">
+                                    <h4>Red Eye ……………………<span>($5.9)</span></h4>
+                                </div>
+                            </div>
+                            <div class="menu">
+                                <p>Intense flavour, slow brewed to perfection</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-6 offset-xxl-1">
+                        <div class="small-title">
+                            <h4>Drinks</h4>
+                        </div>
+                        <div class="menu-items">
+                            <div class="menu-left">
+                                <div class="menu-title">
+                                    <h4>Iced Coffee ……………………<span>($4)</span></h4>
+                                </div>
+                            </div>
+                            <div class="menu">
+                                <p>Cold brewed coffee served over ice.</p>
+                            </div>
+                        </div>
+                        <div class="menu-items">
+                            <div class="menu-left">
+                                <div class="menu-title">
+                                    <h4>Hot Chocolate ……………………<span>($3.5)</span></h4>
+                                </div>
+                            </div>
+                            <div class="menu">
+                                <p>Creamy and rich hot chocolate, topped with marshmallows.</p>
+                            </div>
+                        </div>
+                        <div class="menu-items">
+                            <div class="menu-left">
+                                <div class="menu-title">
+                                    <h4>Fresh Orange Juice ……………………<span>($4)</span></h4>
+                                </div>
+                            </div>
+                            <div class="menu">
+                                <p>Freshly squeezed orange juice.</p>
+                            </div>
+                        </div>
+                        <div class="menu-items">
+                            <div class="menu-left">
+                                <div class="menu-title">
+                                    <h4>Green Tea ……………………<span>($2.5)</span></h4>
+                                </div>
+                            </div>
+                            <div class="menu">
+                                <p>A warm and soothing cup of green tea.</p>
+                            </div>
+                        </div>
+                        <div class="menu-items">
+                            <div class="menu-left">
+                                <div class="menu-title">
+                                    <h4>Chai Latte ……………………<span>($4.5)</span></h4>
+                                </div>
+                            </div>
+                            <div class="menu">
+                                <p>A perfect blend of spices, black tea, and steamed milk.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-6 col-sm-6 offset-xxl-1">
+                        <div class="small-title">
+                            <h4>Snacks</h4>
+                        </div>
+                        <div class="menu-items">
+                            <div class="menu-left">
+                                <div class="menu-title">
+                                    <h4>Fruitcake ……………………<span>($2.9)</span></h4>
+                                </div>
+                            </div>
+                            <div class="menu">
+                                <p>Moist cake filled with delicious dried fruits</p>
+                            </div>
+                        </div>
+                        <div class="menu-items">
+                            <div class="menu-left">
+                                <div class="menu-title">
+                                    <h4>Breakfast Burrito ……………………<span>($7)</span></h4>
+                                </div>
+                            </div>
+                            <div class="menu">
+                                <p>Eggs, cheese, bacon, and potatoes wrapped in a warm tortilla.</p>
+                            </div>
+                        </div>
+                        <div class="menu-items">
+                            <div class="menu-left">
+                                <div class="menu-title">
+                                    <h4>Pepperoni Pizza ……………………<span>($10)</span></h4>
+                                </div>
+                            </div>
+                            <div class="menu">
+                                <p>Crispy crust with pepperoni and mozzarella.</p>
+                            </div>
+                        </div>
+                        <div class="menu-items">
+                            <div class="menu-left">
+                                <div class="menu-title">
+                                    <h4>Pancakes ……………………<span>($2.9)</span></h4>
+                                </div>
+                            </div>
+                            <div class="menu">
+                                <p>Fluffy and buttery golden treats</p>
+                            </div>
+                        </div>
+                        <div class="menu-items">
+                            <div class="menu-left">
+                                <div class="menu-title">
+                                    <h4>Grilled Chicken Salad ……………………<span>($4.5)</span></h4>
+                                </div>
+                            </div>
+                            <div class="menu">
+                                <p>Fresh greens topped with grilled chicken, avocado, and a light vinaigrette.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-shape d-none d-md-block">
+                <img src="{% static 'app1/images/Cold-Drinks.jpg' %}" alt="" style="border-radius: 50px;">
+            </div>
+        </section> 
+        <!--Gallery area-->
+        <div class="gallery-area gallery-area2 pt-90 pb-60">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="single-gallery mb-25">
+                            <img src="{{ products.4.image.url }}" alt class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-5">
+                        <div class="single-gallery mb-25">
+                            <img src="{{ products.5.image.url }}" alt class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-5">
+                        <div class="single-gallery mb-25">
+                            <img src="{{ products.6.image.url }}" alt class="img-fluid">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-6">
+                        <div class="single-gallery mb-25">
+                            <img src="{{ products.7.image.url }}" alt class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Footer section-->
+        <footer>
+            <div class="footer-wrapper gray-bg">
+                <div class="footer-area footer-padding">
+                    <div class="container">
+                        <div class="row justify-content-between align-items-center">
+                            <div class="col-lg-4 sm-text-center">
+                                <div class="footer-title text-center mb-50">
+                                    <h4>Our Location</h4>
+                                    <ul>
+                                        <li><a href="#">Rruga “Ibrahim Rugova” Tiranë, Albania</a></li>
+                                        <li><a href="#">Cel: +355 69 608 0057</a></li>
+                                        <li><a href="#">Email: decoffee@gmail.com</a></li>
+                                        <div class="footer-social pt-30">
+                                            <a href="#"><i class="fa-brands fa-facebook fa-lg"></i></a>
+                                            <a href="#"><i class="fa-brands fa-square-instagram fa-lg"></i></a>
+                                            <a href="#"><i class="fa-brands fa-google fa-lg"></i></a>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 sm-text-center">
+                                <div class="single-footer-caption mb-50">
+                                    <div class="single-footer-caption text-center mb-20">
+                                        <div class="footer-logo mb-15">
+                                            <a href="{% url 'index' %}"><img src="{% static 'app1/images/logo2_footer.png' %}" alt=""></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 sm-text-center">
+                                <div class="footer-title text-center mb-50">
+                                    <h4>Navigation</h4>
+                                    <ul>
+                                        <li>
+                                            <a href="{% url 'about' %}">About Us</a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'menu' %}">Menu</a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'blog' %}">Blog</a>
+                                        </li>
+                                        <li>
+                                            <a href="{% url 'contact' %}">Contact</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p><span>Copyright © </span><script>document.write(new Date().getFullYear());</script><span> All rights reserved |<strong> De Coffee</strong></span></p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </body>
+</html>
